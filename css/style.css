@@ -173,4 +173,83 @@ header
     width: 100%;
     height: 100%;
 }
+
+/********ABOUT********/
+.about-row 
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.about-img 
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about-text
+{
+    padding: 20%;
+    background-color: var(--White);
+}
+
+.about-text h2 
+{
+    font-size: 36px;
+    font-weight: 900;
+    font-family: "Fraunces", sans-serif;
+    color: var(--Verydark);
+}
+
+.about-text p 
+{
+    font-size: 18px;
+    line-height: 28px;
+    margin-top: 32px;
+    color: var(--Dark-grayish-blue);
+}
+
+.about-text a 
+{
+    display: block;
+    font-family: "Fraunces", sans-serif;
+    text-transform: uppercase;
+    position: relative;
+    width: fit-content;
+    padding: 0 8px;
+    color: var(--Verydark);
+    cursor: pointer;
+    margin-top: 32px;
+    font-weight: 900;
+    z-index: 0;
+}
   
+.about-text a::before 
+{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 10px;
+    border-radius: 8px;
+    bottom: -3px;
+    left: 0;
+    z-index: -1;
+    opacity: 0.3;
+    transition: 0.2s;
+}
+  
+.about-text a.yellow::before
+{
+    background-color: var(--Yellow);
+}
+  
+.about-text a.red::before 
+{
+    background-color: var(--Soft-red);
+}
+  
+.about-text a:hover::before 
+{
+    opacity: 1;
+}
